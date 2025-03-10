@@ -155,7 +155,7 @@ const ComponentLibrary = () => {
                     Add the import statement to your React component
                   </p>
                   <div className="mt-2 rounded-md bg-muted/50 p-2 font-mono text-xs">
-                    import { WasmComponent } from '@infinite/component-name';
+                    {'import { ComponentName } from \'@infinite/component-name\';'}
                   </div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ const ComponentLibrary = () => {
                     Add the component to your JSX/TSX code
                   </p>
                   <div className="mt-2 rounded-md bg-muted/50 p-2 font-mono text-xs">
-                    {'<WasmComponent {...props} />'}
+                    {'<ComponentName {...props} />'}
                   </div>
                 </div>
               </div>
