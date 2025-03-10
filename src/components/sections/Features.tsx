@@ -14,7 +14,11 @@ import {
   GlobeIcon, 
   KeyIcon, 
   LayoutIcon, 
+  PaletteIcon,
+  PlayIcon,
   ShieldIcon, 
+  UsersIcon,
+  WrenchIcon,
   ZapIcon 
 } from "lucide-react";
 
