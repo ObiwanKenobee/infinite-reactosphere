@@ -188,9 +188,9 @@ const Documentation = () => {
               <div className="text-primary">import {'{ useWasm }'} from '@react-infinite/core';</div>
               <div className="text-primary">import type {'{ WasmModule }'} from '@react-infinite/types';</div>
               <br />
-              <div className="text-foreground">const ExampleComponent = () => {'{'}</div>
+              <div className="text-foreground">const ExampleComponent = () ={">"} {'{'}</div>
               <div className="ml-4 text-foreground">{'// Load the WebAssembly module'}</div>
-              <div className="ml-4 text-indigo-500">const module = useWasm<WasmModule>('./path/to/module.wasm');</div>
+              <div className="ml-4 text-indigo-500">const module = useWasm{'<WasmModule>'}('./path/to/module.wasm');</div>
               <br />
               <div className="ml-4 text-foreground">{'// Use the WASM functions'}</div>
               <div className="ml-4 text-indigo-500">const result = module ? module.calculate(10, 20) : null;</div>
