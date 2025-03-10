@@ -117,6 +117,30 @@ const Features: React.FC<FeaturesProps> = ({ className }) => {
       icon: <BoxIcon className="h-5 w-5" />,
       delay: 1200
     },
+    {
+      title: "Smart AI Theming",
+      description: "Dynamic UI themes that adapt based on user behavior and device capabilities.",
+      icon: <PaletteIcon className="h-5 w-5" />,
+      delay: 1300
+    },
+    {
+      title: "Developer Tools",
+      description: "Comprehensive suite of debugging and optimization tools for WebAssembly and WebGPU.",
+      icon: <WrenchIcon className="h-5 w-5" />,
+      delay: 1400
+    },
+    {
+      title: "Community Hub",
+      description: "Open developer forum with decentralized governance for platform evolution.",
+      icon: <UsersIcon className="h-5 w-5" />,
+      delay: 1500
+    },
+    {
+      title: "Live Playground",
+      description: "Interactive sandbox for testing and optimizing WASM-powered components in real-time.",
+      icon: <PlayIcon className="h-5 w-5" />,
+      delay: 1600
+    }
   ];
 
   return (
