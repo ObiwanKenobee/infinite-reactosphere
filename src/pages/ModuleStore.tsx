@@ -115,8 +115,8 @@ const ModuleStore = () => {
     >
       <div className="grid gap-8">
         {/* Action buttons */}
-        <div className="flex items-center justify-between">
-          <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button className="group">
               <PlusIcon className="mr-2 h-4 w-4" />
               Add to My Project
@@ -175,7 +175,7 @@ const ModuleStore = () => {
                       
                       <p className="mt-2 text-sm text-muted-foreground">{module.description}</p>
                       
-                      <div className="mt-4 flex items-center justify-between">
+                      <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                         <div className="text-xs text-muted-foreground">
                           By <span className="font-medium text-foreground">{module.author}</span>
                         </div>
