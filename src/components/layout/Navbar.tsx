@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Logo from "../ui/Logo";
 import { Button } from "@/components/ui/button";
 import { GithubIcon, MenuIcon, XIcon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface NavbarProps {
   className?: string;
@@ -23,11 +23,15 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   const navLinks = [
-    { name: "Features", href: "#features" },
-    { name: "Architecture", href: "#architecture" },
-    { name: "Performance", href: "#performance" },
-    { name: "Documentation", href: "#docs" },
+    { name: "Features", href: isHome ? "#features" : "/#features", internal: false },
+    { name: "Architecture", href: isHome ? "#architecture" : "/#architecture", internal: false },
+    { name: "Dashboard", href: "/dashboard", internal: true },
+    { name: "Docs", href: "/docs", internal: true },
+    { name: "Community", href: "/community", internal: true },
   ];
 
   return (
@@ -45,17 +49,31 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <ul className="flex space-x-8">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
-                  className={cn(
-                    "text-sm font-medium transition-colors",
-                    isScrolled
-                      ? "text-foreground/80 hover:text-foreground"
-                      : "text-white/80 hover:text-white"
-                  )}
-                >
-                  {link.name}
-                </a>
+                {link.internal ? (
+                  <Link
+                    to={link.href}
+                    className={cn(
+                      "text-sm font-medium transition-colors",
+                      isScrolled
+                        ? "text-foreground/80 hover:text-foreground"
+                        : "text-white/80 hover:text-white"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={link.href}
+                    className={cn(
+                      "text-sm font-medium transition-colors",
+                      isScrolled
+                        ? "text-foreground/80 hover:text-foreground"
+                        : "text-white/80 hover:text-white"
+                    )}
+                  >
+                    {link.name}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -101,14 +119,25 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       >
         <nav className="space-y-4 pb-4">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block py-2 text-foreground/80 hover:text-foreground"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
+            link.internal ? (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="block py-2 text-foreground/80 hover:text-foreground"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block py-2 text-foreground/80 hover:text-foreground"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            )
           ))}
           <div className="flex flex-col space-y-2 pt-2">
             <Button

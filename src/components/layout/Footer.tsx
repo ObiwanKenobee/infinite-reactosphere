@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Logo from "../ui/Logo";
 import { Button } from "@/components/ui/button";
 import { GithubIcon, TwitterIcon, LinkedinIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface FooterProps {
   className?: string;
@@ -39,24 +40,24 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
               <h4 className="font-display text-sm font-medium">Platform</h4>
               <ul className="mt-3 space-y-2">
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  <Link to="/docs" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Documentation
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    API Reference
-                  </a>
+                  <Link to="/module-store" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Module Store
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    GitHub
-                  </a>
+                  <Link to="/components" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Component Library
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -65,23 +66,23 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
               <h4 className="font-display text-sm font-medium">Resources</h4>
               <ul className="mt-3 space-y-2">
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    Getting Started
-                  </a>
+                  <Link to="/dashboard" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Developer Dashboard
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    Examples
-                  </a>
+                  <Link to="/ai-optimization" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    AI Optimization
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    Tutorials
-                  </a>
+                  <Link to="/community" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Community Hub
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    Blog
+                  <a href="#roadmap" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Roadmap
                   </a>
                 </li>
               </ul>

@@ -6,6 +6,7 @@ import Hero from "@/components/sections/Hero";
 import Features from "@/components/sections/Features";
 import Architecture from "@/components/sections/Architecture";
 import Performance from "@/components/sections/Performance";
+import Roadmap from "@/components/sections/Roadmap";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import AnimatedTransition from "@/components/ui/AnimatedTransition";
@@ -31,6 +32,7 @@ const Index = () => {
         <Features />
         <Architecture />
         <Performance />
+        <Roadmap />
         
         {/* CTA Section */}
         <section className="section-padding bg-primary/5">
