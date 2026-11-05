@@ -29,6 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   const navLinks = [
     { name: "Features", href: isHome ? "#features" : "/#features", internal: false },
     { name: "Architecture", href: isHome ? "#architecture" : "/#architecture", internal: false },
+    { name: "Roadmap", href: "/roadmap", internal: true },
     { name: "Tech Stack", href: "/tech-stack", internal: true },
     { name: "Dashboard", href: "/dashboard", internal: true },
     { name: "Docs", href: "/docs", internal: true },

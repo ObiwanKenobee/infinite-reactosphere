@@ -13,6 +13,7 @@ import ModuleStore from "./pages/ModuleStore";
 import Documentation from "./pages/Documentation";
 import CommunityHub from "./pages/CommunityHub";
 import TechStack from "./pages/TechStack";
+import RoadmapPage from "./pages/RoadmapPage";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/docs" element={<Documentation />} />
           <Route path="/community" element={<CommunityHub />} />
           <Route path="/tech-stack" element={<TechStack />} />
+          <Route path="/roadmap" element={<RoadmapPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -10,6 +10,7 @@ import Roadmap from "@/components/sections/Roadmap";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import AnimatedTransition from "@/components/ui/AnimatedTransition";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   useEffect(() => {
@@ -55,12 +56,14 @@ const Index = () => {
                   </AnimatedTransition>
                   
                   <AnimatedTransition animationType="slide-up" delay={300} className="mt-6 space-y-4 sm:space-x-4 sm:space-y-0">
-                    <Button size="lg" className="w-full sm:w-auto group">
-                      Get Started
-                      <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <Button size="lg" className="w-full sm:w-auto group" asChild>
+                      <Link to="/dashboard">
+                        Get Started
+                        <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
                     </Button>
-                    <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                      View Documentation
+                    <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                      <Link to="/roadmap">View Roadmap</Link>
                     </Button>
                   </AnimatedTransition>
                 </div>
