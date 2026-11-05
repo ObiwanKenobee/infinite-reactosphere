@@ -45,7 +45,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
           {/* Sidebar */}
           <aside className="md:col-span-1 lg:col-span-1">
-            <nav className="sticky top-24 w-full space-y-1 rounded-lg border bg-card p-4 shadow-sm">
+            <nav className="flex w-full gap-1 overflow-x-auto rounded-lg border bg-card p-2 shadow-sm md:sticky md:top-24 md:flex-col md:space-y-1 md:overflow-visible md:p-4 [&>a]:shrink-0 [&>a]:whitespace-nowrap">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 const IconComponent = item.icon;
