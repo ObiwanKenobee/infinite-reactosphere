@@ -50,6 +50,11 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/tech-stack" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Tech Stack
+                  </Link>
+                </li>
+                <li>
                   <Link to="/module-store" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Module Store
                   </Link>

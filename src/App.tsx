@@ -12,6 +12,7 @@ import AIOptimization from "./pages/AIOptimization";
 import ModuleStore from "./pages/ModuleStore";
 import Documentation from "./pages/Documentation";
 import CommunityHub from "./pages/CommunityHub";
+import TechStack from "./pages/TechStack";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/module-store" element={<ModuleStore />} />
           <Route path="/docs" element={<Documentation />} />
           <Route path="/community" element={<CommunityHub />} />
+          <Route path="/tech-stack" element={<TechStack />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

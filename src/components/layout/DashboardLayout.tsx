@@ -30,6 +30,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   const navItems = [
     { name: "Home", path: "/", icon: HomeIcon },
     { name: "Dashboard", path: "/dashboard", icon: LayoutDashboardIcon },
+    { name: "Tech Stack", path: "/tech-stack", icon: ComponentIcon },
     { name: "Component Library", path: "/components", icon: ComponentIcon },
     { name: "AI Optimization", path: "/ai-optimization", icon: BrainIcon },
     { name: "Module Store", path: "/module-store", icon: PackageIcon },
